@@ -6,6 +6,7 @@ export default defineConfig({
   adapter: vercel({
     runtime: 'nodejs20.x',
   }),
+
   site: 'https://example.vercel.app',
   integrations: [],
 });
