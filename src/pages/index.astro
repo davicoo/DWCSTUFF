@@ -1,0 +1,91 @@
+---
+const features = [
+  {
+    title: 'Astro + Vercel',
+    description:
+      'Deploy instantly to Vercel with zero config using Astro\'s official adapter. '
+      + 'Enjoy serverless rendering today and scale to islands or full SPA experiences tomorrow.',
+  },
+  {
+    title: 'Bring Your Own Framework',
+    description:
+      'Start fast with content-focused Astro pages, then sprinkle in Vue components '
+      + 'where interactivity matters—no rewrites required.',
+  },
+  {
+    title: 'Performance by Default',
+    description:
+      'Astro ships zero JavaScript by default, keeping your pages fast while '
+      + 'still giving you the power of modern tooling when you need it.',
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro on Vercel Starter</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="eyebrow">Launch today</p>
+        <h1>Build your site with Astro and deploy on Vercel</h1>
+        <p class="lede">
+          Get a production-ready Astro project tailored for Vercel. Start publishing content today and
+          add Vue components tomorrow—without touching your existing pages.
+        </p>
+        <div class="cta">
+          <a class="button primary" href="https://astro.build/" target="_blank" rel="noreferrer">Explore Astro</a>
+          <a class="button" href="https://vercel.com/" target="_blank" rel="noreferrer">Deploy to Vercel</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="features">
+        <div class="container">
+          <h2>Why this stack?</h2>
+          <div class="grid">
+            {features.map((feature) => (
+              <article class="card">
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="steps">
+        <div class="container">
+          <h2>Get started in three steps</h2>
+          <ol>
+            <li>
+              <strong>Install dependencies:</strong>
+              <code>npm install</code>
+            </li>
+            <li>
+              <strong>Run the dev server:</strong>
+              <code>npm run dev</code>
+            </li>
+            <li>
+              <strong>Deploy to Vercel:</strong>
+              <code>vercel --prod</code> (after linking your project)
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Built with <a href="https://astro.build/">Astro</a> &amp; deployed on <a href="https://vercel.com/">Vercel</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
