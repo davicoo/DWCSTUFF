@@ -3,9 +3,11 @@ import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   output: 'server',
+
   adapter: vercel({
     runtime: 'nodejs20.x',
   }),
+
   site: 'https://example.vercel.app',
   integrations: [],
 });
